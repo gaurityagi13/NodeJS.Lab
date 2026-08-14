@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NodeJS Lab Explorer</title>
+
+    <!-- CSS file connect -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header class="header">
+
+        <div class="logo">
+            <div class="logo-icon">JS</div>
+
+            <div>
+                <h2>NodeJS Lab Explorer</h2>
+                <p>Student Lab Management</p>
+            </div>
+        </div>
+
+    </header>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <main class="container">
+
+        <!-- Welcome section -->
+        <section class="welcome">
+
+            <p class="small-title">WELCOME 👋</p>
+
+            <h1>
+                Explore Your
+                <span>NodeJS Labs</span>
+            </h1>
+
+            <p class="description">
+                Access your NodeJS lab assignments,
+                projects and files in one place.
+            </p>
+
+        </section>
+
+
+        <!-- ================= NODEJS CARD ================= -->
+
+        <section class="node-section">
+
+            <h2>Project</h2>
+
+            <div class="node-card">
+
+                <div class="node-icon">
+                    📁
+                </div>
+
+                <div class="node-info">
+
+                    <h2>NodeJS</h2>
+
+                    <p>
+                        Explore all NodeJS laboratory
+                        assignments and project files.
+                    </p>
+
+                    <button onclick="openLabs()">
+                        Open NodeJS Labs
+                        <span>→</span>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= LAB SECTION ================= -->
+
+        <section id="labsSection" class="labs-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <p class="small-title">NODEJS PROJECT</p>
+
+                    <h2>Lab Assignments</h2>
+
+                    <p>
+                        Select a lab to explore its files.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="lab-grid">
+
+                <!-- LAB 01 -->
+                <div class="lab-card" onclick="openLab('Lab-01')">
+
+                    <div class="lab-number">
+                        01
+                    </div>
+
+                    <div class="lab-icon">
+                        📘
+                    </div>
+
+                    <h3>Lab-01</h3>
+
+                    <p>
+                        Getting Started with Node.js
+                    </p>
+
+                    <div class="open">
+                        Open Lab →
+                    </div>
+
+                </div>
+
+
+                <!-- LAB 02 -->
+                <div class="lab-card" onclick="openLab('Lab-02')">
+
+                    <div class="lab-number">
+                        02
+                    </div>
+
+                    <div class="lab-icon">
+                        📗
+                    </div>
+
+                    <h3>Lab-02</h3>
+
+                    <p>
+                        Node.js Server & Modules
+                    </p>
+
+                    <div class="open">
+                        Open Lab →
+                    </div>
+
+                </div>
+
+
+                <!-- LAB 03 -->
+                <div class="lab-card" onclick="openLab('Lab-03')">
+
+                    <div class="lab-number">
+                        03
+                    </div>
+
+                    <div class="lab-icon">
+                        📙
+                    </div>
+
+                    <h3>Lab-03</h3>
+
+                    <p>
+                        Student Directory API
+                    </p>
+
+                    <div class="open">
+                        Open Lab →
+                    </div>
+
+                </div>
+
+
+                <!-- LAB 04 -->
+                <div class="lab-card" onclick="openLab('Lab-04')">
+
+                    <div class="lab-number">
+                        04
+                    </div>
+
+                    <div class="lab-icon">
+                        📕
+                    </div>
+
+                    <h3>Lab-04</h3>
+
+                    <p>
+                        Search, Filter & Sort API
+                    </p>
+
+                    <div class="open">
+                        Open Lab →
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            NodeJS Lab Explorer • BCA Lab Work
+        </p>
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script>
+
+        // Open NodeJS Labs section
+        function openLabs() {
+
+            document
+                .getElementById("labsSection")
+                .scrollIntoView({
+                    behavior: "smooth"
+                });
+
+        }
+
+
+        // Open selected lab
+        function openLab(labName) {
+
+            // Node.js server ko lab ka naam bhejna
+            window.location.href =
+                "/lab/" + labName;
+
+        }
+
+    </script>
+
+</body>
+
+</html>
